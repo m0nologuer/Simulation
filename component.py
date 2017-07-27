@@ -13,4 +13,4 @@ class Component(object):
 		return
 
 	def update(self, task):
-		return Task.cont
+		return task.cont

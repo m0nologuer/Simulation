@@ -13,7 +13,7 @@ class Baseball(Component):
 	#Count frames survived
 	def update(self, task):
 		self.runtime += 1.0
-		return Task.cont
+		return task.cont
 
 	#Reward is time spent
 	def reward(self, object_array):
