@@ -4,7 +4,9 @@ from direct.task import Task
 class Baseball(Component):
 	"""Base class for the scripting of a component"""
 	def __init__(self, name, model, physics):
-		Component.__init__(name, model, physics)
+		self.model = model
+		self.name = name
+		self.physics = physics
 		self.runtime = 0
 		return
 
