@@ -1,6 +1,5 @@
 from component import Component
 from panda3d.core import Vec3
-from panda3d.core import LRotationf
 
 class PingPong(Component):
 	"""Base class for the scripting of a component"""
@@ -14,7 +13,7 @@ class PingPong(Component):
 	def act(self, action, object_array):
 		#4 axes - yaw pitch roll rotation
 		# + x position
-		self.model.parent.node().applyTorqueImpulse(LRotationf(action[0], action[1], action[2]))
+		self.model.parent.node().applyTorqueImpulse(Vec3(action[0], action[1], action[2]))
 		self.model.parent.node().applyCentralImpulse(Vec3(action[3], 0, 0))
 
 
