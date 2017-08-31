@@ -14,13 +14,13 @@ class PingPong(Component):
 	def act(self, action, object_array):
 		#4 axes - yaw pitch roll rotation
 		# + x position
-		self.model.addTorque(LRotationf(action[0], action[1], action[2]))
-		self.model.addImpulse(Vec3(action[3], 0, 0))
+		#self.model.parent.node().addTorque(LRotationf(action[0], action[1], action[2]))
+		#self.model.parent.node().addImpulse(Vec3(action[3], 0, 0))
 
 
 	def update(self, task):
 
-		correction = (self.model.parent.getPos() - Vec3(0,5,5)) * 0.01
-		self.model.parent.node().addImpulse(correction)
+		#correction = (self.model.parent.getPos() - Vec3(0,5,5)) * 0.01
+		#self.model.parent.node().addImpulse(correction)
 
 		return task.cont
