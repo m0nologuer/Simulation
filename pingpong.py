@@ -16,3 +16,11 @@ class PingPong(Component):
 		# + x position
 		self.model.addTorque(LRotationf(action[0], action[1], action[2]))
 		self.model.addImpulse(Vec3(action[3], 0, 0))
+
+
+	def update(self, task):
+
+		correction = (model.parent.getPos() - Vec3(0,5,5)) * 0.01
+		self.model.addImpulse(correction)
+
+		return task.cont

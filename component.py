@@ -6,10 +6,7 @@ class Component(object):
 		self.physics = physics
 		return
 
-	def setup(self):
-		return
-
-	def physics_setup(self, node_dict):
+	def setup(self, scene_objects, randomizer_tree):
 		return
 
 	def update(self, task):
