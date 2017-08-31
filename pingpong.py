@@ -19,7 +19,7 @@ class PingPong(Component):
 
 	def update(self, task):
 
-		correction = (self.model.parent.getPos() - Vec3(0,5,5)) * 0.01
+		correction = (Vec3(0,5,5) - self.model.parent.getPos()) * 0.01
 		self.model.parent.node().applyCentralImpulse(correction)
 
 		return task.cont
